@@ -1,0 +1,10 @@
+statsvn/*
+coverage/*
+profile/*
+doc/*
+website/.*\.html$
+pkg/*
+tmp/*
+rubyrep-svc*
+*.cmd
+the_specialist.rb

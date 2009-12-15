@@ -1,0 +1,48 @@
+== 1.0.7 2009-07-26
+
+* Bug fix: buffered LoggedChangeLoader#update to avoid timeouts with large replication backlogs.
+
+== 1.0.6 2009-07-25
+
+* Bug fix: do not assume anymore that replication log events appear in sequential order
+* Feature: increased resilience of rubyrep to network timeouts
+* Feature: introduced :after_infrastructure_setup handler
+
+== 1.0.5 2009-07-03
+
+* Bug fix: rubyrep replication runs should survive update or delete attempts rejected by the database.
+* Bug fix: support for multiple PostgreSQL schemas holding tables of the same name.
+
+== 1.0.4 2009-06-20
+
+* Bug fix: added missing file (log_helper.rb) to gem manifest
+
+== 1.0.3 2009-06-20
+
+* Minor enhancements:
+  * Added support (and according tests) for non-standard table / column names
+  * Verified compatibility with jruby 1.3.0
+* Bug fixes:
+  * Also big exception messages should be accommodated in event log table.
+
+== 1.0.2 2009-06-13
+
+* 3 minor enhancements:
+  * Simplified low-level functions to read records from the database
+    (easier integration of additional databases)
+  * Better replication efficiency with large replication backlogs
+  * Reduced costs of an empty replication run
+  * Ignore tables that only exist in one database
+    (tables created for testing / backup don't block scan / sync / replication)
+
+== 1.0.1 2009-03-25
+
+* 3 minor enhancements:
+  * Verified compatibility with active_record 2.3.2 and jruby 1.2.0
+  * Released jruby bunde with the updated activerecord and jruby
+  * Catch ctrl+c and execute graceful shutdown
+
+== 1.0.0 2009-03-07
+
+* 1 major enhancement:
+  * Initial release
